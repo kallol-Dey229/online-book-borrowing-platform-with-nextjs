@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "The Silent Forest",
+    "author": "David Kummer",
+    "description": "A mysterious story about a forest where no sound exists and the secrets hidden within.",
+    "new_arrival": true,
+    "category": "Story",
+    "available_quantity": 12,
+    "image_url": "https://i.ibb.co.com/x8gTnhfG/The-silent-Forest.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Mastering JavaScript",
+    "author": "James Jaworski",
+    "description": "A complete guide to modern JavaScript, covering ES6+, frameworks, and real-world projects.",
+    "new_arrival": false,
+    "category": "Tech",
+    "available_quantity": 8,
+    "image_url": "https://i.ibb.co.com/dw7Wd9gh/Mastering-Java-Script.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Journey to Mars",
+    "author": "Raine, Paul, Carroll, Alice",
+    "description": "An exciting scientific exploration of humanity’s mission to colonize Mars.",
+    "new_arrival": false,
+    "category": "Science",
+    "available_quantity": 5,
+    "image_url": "https://i.ibb.co.com/vvgnZRJR/Journey-to-Mars.jpg"
+  },
+  {
+    "id": 4,
+    "title": "The Lost Diary",
+    "author": "Anne Frank",
+    "description": "A gripping tale of a diary that reveals a hidden past and untold love story.",
+    "new_arrival": false,
+    "category": "Story",
+    "available_quantity": 10,
+    "image_url": "https://i.ibb.co.com/wZfx2Jb6/The-Lost-Diary.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Python for Beginners",
+    "author": "Alex Bowers, Daniel Correa ",
+    "description": "An easy-to-follow introduction to Python programming for absolute beginners.",
+    "new_arrival": false,
+    "category": "Tech",
+    "available_quantity": 15,
+    "image_url": "https://i.ibb.co.com/NdBk94ZD/Python-for-Beginners.jpg"
+  },
+  {
+    "id": 6,
+    "title": "The Quantum World",
+    "author": "Kenneth W. Ford",
+    "description": "A deep dive into quantum mechanics explained in simple terms.",
+    "new_arrival": false,
+    "category": "Science",
+    "available_quantity": 7,
+    "image_url": "https://i.ibb.co.com/27RY1v4N/The-Quantum-World.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Midnight Train",
+    "author": "Matt Haig",
+    "description": "A suspense thriller set on a train journey filled with unexpected twists.",
+    "new_arrival": true,
+    "category": "Story",
+    "available_quantity": 9,
+    "image_url": "https://i.ibb.co.com/b57ws9MX/Midnight-Train.jpg"
+  },
+  {
+    "id": 8,
+    "title": "AI Revolution",
+    "author": "Erik Seversen",
+    "description": "Exploring the impact of artificial intelligence on modern society and future trends.",
+    "new_arrival": true,
+    "category": "Tech",
+    "available_quantity": 6,
+    "image_url": "https://i.ibb.co.com/TBB4fGtS/AI-Revolution.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Secrets of the Ocean",
+    "author": "Alicia Klepeis",
+    "description": "Discover the hidden mysteries beneath the ocean and the life it supports.",
+    "new_arrival": false,
+    "category": "Science",
+    "available_quantity": 11,
+    "image_url": "https://i.ibb.co.com/7dptv7Yw/Secrets-of-the-Ocean.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Broken Dreams",
+    "author": "Qudrah Adam",
+    "description": "A touching story about hope, struggle, and rebuilding life after loss.",
+    "new_arrival": false,
+    "category": "Story",
+    "available_quantity": 4,
+    "image_url": "https://i.ibb.co.com/mCmrjLxr/Broken-Dreams.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Web Development Essentials",
+    "author": "Audrey O'Shea",
+    "description": "Learn the fundamentals of HTML, CSS, and JavaScript for building modern websites.",
+    "new_arrival": true,
+    "category": "Tech",
+    "available_quantity": 13,
+    "image_url": "https://i.ibb.co.com/tP2c4FzM/Web-Development-Essentials.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Space-Time Mysteries",
+    "author": "Brad Steiger",
+    "description": "An exploration of relativity, black holes, and the fabric of space-time.",
+    "new_arrival": false,
+    "category": "Science",
+    "available_quantity": 5,
+    "image_url": "https://i.ibb.co.com/r2K20zRq/Space-Time-Mysteries.jpg"
+  }
+]
