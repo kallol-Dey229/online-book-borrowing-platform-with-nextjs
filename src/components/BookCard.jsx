@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 
 const BookCard = ({book}) => {
@@ -13,7 +14,9 @@ const BookCard = ({book}) => {
                 <p>{author}</p>
                 <p>Type: {category}</p>
                 <div className="card-actions mt-5">
+                    <Link href={`/books/${book.id}`}>
                     <button className="btn btn-primary">View Details</button>
+                    </Link>
                 </div>
             </div>
         </div>

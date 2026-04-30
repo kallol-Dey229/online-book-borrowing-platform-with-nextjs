@@ -107,7 +107,7 @@ export default async function Home() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-6">
         <div className="p-4 bg-gray-100 rounded-xl flex items-center gap-2 text-center justify-center"><FaBook /> Huge Book Collection</div>
-        <div className="p-4 bg-gray-100 rounded-xl flex items-center gap-2 text-center justify-center"><BsLightningChargeFill /> Fast Borrow</div>
+        <div className="p-4 bg-gray-100 rounded-xl flex items-center gap-2 text-center justify-center"><BsLightningChargeFill /> Fast Borrow Process</div>
         <div className="p-4 bg-gray-100 rounded-xl flex items-center gap-2 text-center justify-center"><GrMoney /> Free Access</div>
         <div className="p-4 bg-gray-100 rounded-xl flex items-center gap-2 text-center justify-center"><FaSearch /> Easy Search</div>
       </div>
