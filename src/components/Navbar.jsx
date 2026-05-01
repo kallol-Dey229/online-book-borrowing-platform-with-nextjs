@@ -17,7 +17,7 @@ const Navbar = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className='flex items-center justify-between mx-5 md:mx-20 lg:mx-40 mt-6 relative'>
+        <div className='flex items-center justify-between mx-5 md:mx-30 lg:mx-65 mt-6 relative'>
 
 
             <div className="flex items-center">
