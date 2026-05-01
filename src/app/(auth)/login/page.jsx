@@ -1,9 +1,35 @@
 'use client'
-
-import Link from "next/link";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { authClient } from '@/lib/auth-client';
+import Link from 'next/link';
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 const LoginPage = () => {
+    const { register, handleSubmit, formState: { errors } } = useForm();
+
+    const [isShowPassword, setIsShowPassword] = useState(false);
+
+    const handleLogin = async (Data) => {
+        const { name, photo, email, password } = Data;
+
+        const { data, error } = await authClient.signIn.email({
+
+            email: email,
+            password: password,
+            rememberMe: true,
+            callbackURL: "/",
+        });
+
+        if (error) {
+            toast.error('Invalid Email');
+        }
+
+        if (data) {
+            toast.success('Login Successful');
+        }
+    }
     return (
         <div className='mx-5 md:mx-30 lg:mx-65 flex justify-center items-center min-h-[80vh] bg-slate-100 mt-10'>
             <div className='p-4 rounded-xl bg-white'>
@@ -11,7 +37,7 @@ const LoginPage = () => {
 
                 <hr className='mb-5 text-gray-200' />
 
-                <form className='space-y-4' onSubmit={handleSubmit(handleLoginFunc)}>
+                <form className='space-y-4' onSubmit={handleSubmit(handleLogin)}>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">Email</legend>
                         <input type="email" {...register("email", { required: "Email field is required" })} className="input" placeholder="Type your email" />
