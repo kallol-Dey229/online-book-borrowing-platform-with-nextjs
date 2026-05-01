@@ -1,4 +1,5 @@
 'use client'
+import AllBooksLeftSidebar from "@/components/AllBooksLeftSidebar";
 import BookCard from "@/components/BookCard";
 import { useEffect, useState } from "react";
 
@@ -6,6 +7,7 @@ const AllBooksPage = () => {
     const [books, setBooks] = useState([]);
     const [filteredBooks, setFilteredBooks] = useState([]);
     const [searchedBook, setSearchedBook] = useState("");
+    const [activeCategory, setActiveCategory] = useState("");
 
     useEffect(() => {
         fetch("http://localhost:3000/books.json")
@@ -38,12 +40,27 @@ const AllBooksPage = () => {
                 </button>
             </div>
 
-            <div className='mt-20 grid grid-cols-2 md:grid-cols-3 gap-4'>
-                {
-                    filteredBooks.map(book => (
-                        <BookCard key={book.id} book={book} />
-                    ))
-                }
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_4fr] gap-4">
+
+                
+                <div>
+                    <AllBooksLeftSidebar
+                        books={books}
+                        setFilteredBooks={setFilteredBooks}
+                        activeCategory={activeCategory}
+                        setActiveCategory={setActiveCategory}
+                    />
+                </div>
+
+                
+                <div className="mt-20 grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {
+                        filteredBooks.map(book => (
+                            <BookCard key={book.id} book={book} />
+                        ))
+                    }
+                </div>
+
             </div>
 
         </div>
