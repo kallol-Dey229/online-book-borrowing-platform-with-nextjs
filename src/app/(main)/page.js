@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { BsLightningChargeFill } from 'react-icons/bs';
 import { FaBook, FaSearch } from 'react-icons/fa';
 import { GrMoney } from 'react-icons/gr';
+import 'animate.css';
 
 export default async function Home() {
 
