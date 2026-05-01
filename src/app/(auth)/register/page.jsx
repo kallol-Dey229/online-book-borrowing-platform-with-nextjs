@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaEye, FaEyeSlash, FaGoogle } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 
 const RegisterPage = () => {
@@ -33,6 +33,13 @@ const RegisterPage = () => {
         }
 
     }
+
+
+    const handleGoogleButton = async () => {
+            const data = await authClient.signIn.social({
+                provider: "google",
+            });
+        }
 
 
     return (
@@ -85,6 +92,8 @@ const RegisterPage = () => {
 
                     <button className='btn w-full btn-neutral'>Register</button>
                 </form>
+
+                <button onClick={handleGoogleButton} className='btn w-full mt-5'>Continue with Google <FaGoogle className='text-green-900' /></button>
 
                 <p className='mt-5 text-center'>Already have an account? <Link href={'/login'} className='text-blue-700'>Login</Link></p>
 

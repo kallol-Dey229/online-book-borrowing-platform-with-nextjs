@@ -3,7 +3,7 @@ import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaEye, FaEyeSlash, FaGoogle } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 
 const LoginPage = () => {
@@ -12,7 +12,7 @@ const LoginPage = () => {
     const [isShowPassword, setIsShowPassword] = useState(false);
 
     const handleLogin = async (Data) => {
-        const { name, photo, email, password } = Data;
+        const { email, password } = Data;
 
         const { data, error } = await authClient.signIn.email({
 
@@ -23,13 +23,22 @@ const LoginPage = () => {
         });
 
         if (error) {
-            toast.error('Invalid Email');
+            toast.error('Invalid Email or Password');
         }
 
         if (data) {
             toast.success('Login Successful');
         }
     }
+
+
+    const handleGoogleButton = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+    }
+
+    
     return (
         <div className='mx-5 md:mx-30 lg:mx-65 flex justify-center items-center min-h-[80vh] bg-slate-100 mt-10'>
             <div className='p-4 rounded-xl bg-white'>
@@ -51,7 +60,7 @@ const LoginPage = () => {
                         <legend className="fieldset-legend">Password</legend>
                         <input type={isShowPassword ? "text" : "password"} {...register("password", { required: "Password field is required" })} className="input" placeholder="Type your password" />
                         <span className='absolute right-2 top-4 cursor-pointer' onClick={() => setIsShowPassword(!isShowPassword)}>
-                            {isShowPassword? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}
+                            {isShowPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}
                         </span>
                         {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
 
@@ -59,6 +68,8 @@ const LoginPage = () => {
 
                     <button className='btn w-full btn-neutral'>Login</button>
                 </form>
+
+                <button onClick={handleGoogleButton} className='btn w-full mt-5'>Continue with Google <FaGoogle className='text-green-900' /></button>
 
                 <p className='mt-5 text-center'>Don&apos;t have an account? <Link href={'/register'} className='text-red-700'>Register</Link></p>
 
